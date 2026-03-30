@@ -1,0 +1,44 @@
+DROP DATABASE IF EXISTS task2;
+CREATE DATABASE task2;
+USE task2;
+CREATE TABLE person(
+    id INT,
+    nam VARCHAR(50) NOT NULL,
+    age INT ,
+    PRIMARY KEY(id)
+    );
+    
+    
+    -- INSERT DATA
+    INSERT INTO person VALUES
+    (170,'sabit',22),
+    (171,'mona',21),
+    (172,'mamba',21);
+    
+    -- UPDATE COMMAND
+    UPDATE person
+     SET nam = 'pritom'
+    WHERE
+    id = 171;
+    
+    -- ALTER COLUMN
+    ALTER TABLE person
+    ADD gender char(20);
+    
+    -- UPDATE NEW COLUMN
+    UPDATE person
+    SET gender = 'm'
+    WHERE 
+    id = 170;
+    
+    -- change variable name
+    ALTER TABLE person
+    CHANGE nam fullnam VARCHAR(50);
+    
+    -- DROP VARIABLE/COLUMN
+    ALTER TABLE person
+    DROP COLUMN age;
+    
+    SELECT * FROM person;
+    
+    
